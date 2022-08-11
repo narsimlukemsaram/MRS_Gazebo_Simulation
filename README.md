@@ -1,5 +1,5 @@
 # MRS Gazebo Simulation
-This is the repository for the Multi-Robot Systems (MRS) Gazebo Simulation: To run two UAVs in SITL, they can arm and start missions simultaneously using keyboard control.   
+This is the repository for the Multi-Robot Systems (MRS) Gazebo Simulation: To run two UAVs in SITL, they can takeoff, arm and start missions simultaneously using keyboard control. Also, it detects and tracks each other UAVs simultaneously.   
 
 # System Requirements
 Required OS is Ubuntu 18.04 LTS 64-bit (ROS Melodic). The repository are supposed to be compiled by catkin tools.
@@ -7,10 +7,10 @@ Required OS is Ubuntu 18.04 LTS 64-bit (ROS Melodic). The repository are suppose
 # Dependencies
 External dependencies required.
 
-Install the DarkNet ROS and its dependencies from:
+Install the DarkNet ROS and its dependencies from (install in catkin_ws/src folder):
 https://github.com/leggedrobotics/darknet_ros
 
-Install the XTDrone and its dependencies from:
+Install the XTDrone and its dependencies from (install in home/XTDrone folder):
 https://www.yuque.com/xtdrone/manual_en/basic_config
 
 # Installation
