@@ -23,6 +23,12 @@ $ cd ~/catkin_ws/src
 
 $ git clone https://github.com/narsimlukemsaram/mrs_gazebo_simulation.git
 
+Copy sub-folders from folder mrs_gazebo_simulation/src to ~/catkin_ws/src
+
+$ cp mrs_gazebo_simulation/src/*.* to ~/catkin_ws/src
+
+$ cd ..
+
 Compile the software:
 
 $ catkin_make
@@ -35,7 +41,7 @@ Start roscore
 $ roscore
 
 # Terminal 2:
-Start YOLO/DarkNet ROS on UAV1, at this point, load the network parameters first, and then wait for the image to arrive.
+Start YOLO/DarkNet ROS on UAV 1, at this point, load the network parameters first, and then wait for the image to arrive.
 
 $ cd ~/catkin_ws
 
@@ -44,7 +50,7 @@ $ source devel/setup.bash
 $ roslaunch launch_inference launch_inference_drone_1.launch
 
 # Terminal 3:
-Start YOLO/DarkNet ROS on UAV2, at this point, load the network parameters first, and then wait for the image to arrive.
+Start YOLO/DarkNet ROS on UAV 2, at this point, load the network parameters first, and then wait for the image to arrive.
 
 $ cd ~/catkin_ws
 
@@ -60,28 +66,28 @@ $ cd ~/PX4_Firmware/launch
 $ roslaunch px4 darknet_ros_iris_two_drone.launch
 
 # Terminal 5:
-Then establish UAV1 communication.
+Then establish UAV 1 communication.
 
 $ cd ~/XTDrone/communication
 
 $ python multirotor_communication.py iris 0
 
 # Terminal 6:
-Then establish UAV2 communication.
+Then establish UAV 2 communication.
 
 $ cd ~/XTDrone/communication
 
 $ python multirotor_communication.py iris 1
 
 # Terminal 7:
-Control UAV1 takeoff. For multiple UAVs, it is easy for Offboard mode to control it to take off with the expectation of a greater than 0.3 m/s speed in z axis, so you can not use Takeoff mode (v in the keyboard). Press I repeatedly to increase the expected z speed to more than 0.3m/s, then press B to switch to the offboard mode, then press T to unlock and take off. After flying to the appropriate height, press S to achieve hovering.
+Control UAV 1 takeoff. For multiple UAVs, it is easy for Offboard mode to control it to take off with the expectation of a greater than 0.3 m/s speed in z axis, so you can not use Takeoff mode (v in the keyboard). Press I repeatedly to increase the expected z speed to more than 0.3m/s, then press B to switch to the offboard mode, then press T to unlock and take off. After flying to the appropriate height, press S to achieve hovering.
 
 $ cd ~/XTDrone/control/keyboard
 
 $ python modified_multirotor_keyboard_control.py iris 1 vel 0
 
 # Terminal 8:
-Control UAV2 takeoff. For multiple UAVs, it is easy for Offboard mode to control it to take off with the expectation of a greater than 0.3 m/s speed in z axis, so you can not use Takeoff mode (v in the keyboard). Press I repeatedly to increase the expected z speed to more than 0.3m/s, then press B to switch to the offboard mode, then press T to unlock and take off. After flying to the appropriate height, press S to achieve hovering.
+Control UAV 2 takeoff. For multiple UAVs, it is easy for Offboard mode to control it to take off with the expectation of a greater than 0.3 m/s speed in z axis, so you can not use Takeoff mode (v in the keyboard). Press I repeatedly to increase the expected z speed to more than 0.3m/s, then press B to switch to the offboard mode, then press T to unlock and take off. After flying to the appropriate height, press S to achieve hovering.
 
 $ cd ~/XTDrone/control/keyboard
 
